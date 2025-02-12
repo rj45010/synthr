@@ -1,0 +1,78 @@
+.sidebar {
+  width: 80px;
+  background: radial-gradient(circle, rgb(2, 34, 34), rgb(4, 45, 33));
+  margin-top: 10px;
+  padding: 6px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: fit-content;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0px;
+  width: 100%;
+}
+
+.sidebar-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.sidebar-item:hover {
+  background: radial-gradient(circle, rgb(9, 80, 58), transparent, transparent);
+}
+
+.sidebar-item.active {
+  background: radial-gradient(circle, rgb(21, 143, 105), transparent 70%, transparent 100%);
+}
+
+.sidebar-item.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 50%;
+  background-color: rgb(33, 211, 141);
+  box-shadow: 0px 0px 6px rgb(33, 211, 141);
+  border-radius: 0 15px 15px 0;
+}
+
+.sidebar-icon {
+  width: 28px;
+  height: 28px;
+  filter: invert(0.6);
+}
+
+.sidebar-item.active .sidebar-icon {
+  filter: invert(1);
+}
+
+.sidebar-label {
+  color: gray;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  transition: color 0.3s;
+}
+
+.sidebar-item.active .sidebar-label {
+  color: white;
+}

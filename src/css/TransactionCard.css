@@ -1,0 +1,222 @@
+.transaction-container {
+  background-color: #1b362f;
+  padding: 12px 16px;
+  border-radius: 16px;
+  flex: 1 1 calc(33.33% - 10px);
+  min-width: 363px; 
+  max-width: 377px;
+}
+
+.transaction-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Swap Card */
+.token-box {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.token-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 3px;
+}
+
+.token-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: #95B2BA;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.eth-icon {
+  height: 12px;
+}
+
+.token-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #95B2BA;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 7px;
+}
+.token-name span {
+  color: black;
+}
+
+.name-icon {
+  height: 12px;
+}
+
+.token-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.token-amount {
+  color: #E6EEF0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.token-label {
+  color: #4CC38A;
+  font-size: 12px;
+  text-align: center;
+}
+
+.swap-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.swap-progress {
+  height: 4px;
+  width: 160px;
+  background: linear-gradient(90deg, transparent 0%, #4CC38A 50%, transparent 100%);
+  position: relative;
+}
+
+.swap-dot {
+  width: 12px;
+  height: 12px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background-color: #59e3a0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.swap-text {
+  color: #4CC38A;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* Liquidation Card */
+.liquidation-grid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.liquidation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b362f;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 40px;
+}
+
+.liquidation-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.liquidation-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: #95B2BA;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  position: relative;
+}
+
+.liquidation-icon img {
+  height: 12px;
+}
+
+.liquidation-info {
+  line-height: 1.5;
+}
+
+.liquidation-amount {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.liquidation-subtext {
+  color: #34D399;
+  font-size: 12px;
+  margin-top: 0;
+}
+
+.network-tag {
+  background: #95B2BA;
+  padding: 6px 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.network-tag span {
+  color: black;
+  font-size: 12px;
+}
+
+.network-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.liquidation-progress-container {
+  margin-top: 12px;
+}
+
+.liquidation-status {
+  color: #34D399;
+  font-size: 12px;
+}
+
+.progress-bar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent 0%, #37805c 50%, transparent 100%);
+}
+
+.progress-fill {
+  height: 6px;
+  width: 42px;
+  border-radius: 16px;
+  background-color: #4dffa9;
+}
+
+.transaction-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
