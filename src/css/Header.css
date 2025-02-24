@@ -2,95 +2,152 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0;
-  background: transparent;
-  color: #ffffff;
+  margin: 14px 44px;
+  width: auto; 
+  height: fit-content;
   position: relative;
 }
 
 .header::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 111px;
   width: 100%;
   height: 1px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #31DDF430;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
 }
 
 .left-section {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 6rem;
+  gap: 78px;
 }
 
-.logo-section a {
+.home-link {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  text-decoration: none; 
-  color: inherit; 
+  gap: 14px;
 }
 
 .logo {
-  width: 40%;
+  width: 33.5px;
+  height: 33px;
   cursor: pointer;
 }
 
-.site-name {
-  font-size: 24px;
-  font-weight: bold;
+.Name {
+  width: 90px;
+  height: 21px;
   cursor: pointer;
 }
 
 .info-section {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
+  gap: 31px;
 }
 
 .debt-issued {
   display: flex;
   flex-direction: column;
   text-align: center;
+  gap: 3px;
 }
 
 .label {
-  font-size: 14px;
-  color: #a0a0a0;
+  font-family: "Chakra Petch";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17.05px;
+  letter-spacing: 1%;
+  width: 76px;
+  height: 17px;
+  color:#67807C;
 }
 
 .value {
+  font-family: "Chakra Petch";
+  font-weight: 700;
   font-size: 14px;
+  line-height: 19.89px;
+  letter-spacing: 1%;
+  width: 68px;
+  height: 20px;
+  color: #f8ffff;
 }
 
 .divider {
   width: 1px;
-  height: 30px;
-  background: linear-gradient(to bottom, rgba(0, 255, 179, 0) 0%, rgba(0, 255, 179, 1) 50%, rgba(0, 255, 179, 0) 100%);
-  margin: 0 20px;
+  height: 35px;
+  background: linear-gradient(to bottom, rgba(0, 255, 179, 0) 0%, #27F1D9 50%, rgba(0, 255, 179, 0) 100%);
 }
 
 .c-ratio {
-  text-align: center;
+  width: 227px;
+  height: 48.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.c-ratio-header,
+.c-ratio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 227px;
+  height: 17px;
+  left: 144px;
+}
+
 .c-ratio-footer {
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
+  align-items: center;
+  width: 227px;
+  height: 17px;
+  top: 31.54px;
+  left: 144px;
+}
+.c-ratio-label {
+  text-align: start;
+  font-family: "Chakra Petch";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17.05px;
+  letter-spacing: 1%;
+  width: 46px;
+  color:#67807C;
+}
+
+.c-ratio-value {
+  text-align: end;
+  font-family: "Chakra Petch";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17.05px;
+  letter-spacing: 1%;
+  width: 30px;
+  left: 341px;
+  color: #f8ffff;
 }
 
 .c-ratio-bar {
   display: flex;
-  gap: 4px;
+  left: 144px;
+  top: 21px;
+  width: 227px;
+  gap: 4.5px;
+  height: 5.53px;
 }
 
 .c-ratio-segment {
-  width: 6px;
-  height: 6px;
+  width: 5.53px;
+  height: 5.53px;
   border-radius: 50%;
   background: #4a4a4a;
 }
@@ -102,36 +159,79 @@
 .right-section {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 30px;
 }
 
-.social-icon img {
-  width: 82%;
+.social-icon {
+  width: 15.6px;
+  height: 18px;
+  top: 18.69px;
+  left: 1117.43px;
 }
 
 .account {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  background: rgb(31, 47, 48);
-  padding: 0.5rem 1rem;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  cursor: pointer;
+  justify-content: center;  
+  width: 187px;
+  height: auto;
+  padding: 17px 26px;
+  gap: 30px;
+  background: #152926;
+  border-radius: 13px;
+  position: relative;
+  overflow: hidden;
 }
 
+.account::before {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  border-radius: 13px;
+  padding: 1px;
+  background: linear-gradient(117.81deg, rgba(0, 244, 255, 0.25) 10.35%, rgba(0, 255, 71, 0.03) 88.67%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+
 .account-icon {
-  width: 15%;
+  height: 22px;
+  width: 21px;
 }
 
 .account-address {
-  font-size: 14px;
+  font-family: "Chakra Petch";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20.8px;
+  letter-spacing: 0px;
+  color: #F8FFFF;
+
 }
 
 .dropdown {
-  background: none;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  background-color: transparent;
   border: none;
-  color: #ffffff;
-  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+}
+
+.dropdown::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: solid #F8FFFF;
+  border-width: 0 2px 2px 0;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  top: -50%;
 }

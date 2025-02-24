@@ -1,9 +1,10 @@
 import React from 'react';
 import '../css/Header.css';
-import Logo from '../assets/logo.PNG';
-import TwitterIcon from '../assets/twitter.PNG';
-import DiscordIcon from '../assets/discord.PNG';
-import MetaMaskIcon from '../assets/metamask.PNG';
+import Logo from '../assets/images/Synthr Logo.svg';
+import Name from '../assets/images/Synthr-White.svg'
+import TwitterIcon from '../assets/images/Trazado 1893 2.svg';
+import DiscordIcon from '../assets/images/Trazado 1693 1.svg';
+import MetaMaskIcon from '../assets/images/metamask 2.svg';
 
 const Header = () => {
   return (
@@ -12,7 +13,7 @@ const Header = () => {
         <div className="logo-section">
           <a href="/" className="home-link">
             <img src={Logo} alt="Logo" className="logo" />
-            <h1 className="site-name">SYNTHR</h1>
+            <img src={Name} alt="Name" className="Name" />
           </a>
         </div>
 
@@ -24,8 +25,8 @@ const Header = () => {
           <div className="divider" />
           <div className="c-ratio">
             <div className="c-ratio-header">
-              <span className="label">C-RATIO</span>
-              <span className="value">160%</span>
+              <span className="c-ratio-label">C-RATIO</span>
+              <span className="c-ratio-value">160%</span>
             </div>
             <div className="c-ratio-bar">
               {Array(23).fill(null).map((_, index) => (
@@ -36,8 +37,8 @@ const Header = () => {
               ))}
             </div>
             <div className="c-ratio-footer">
-              <span className="label">Min</span>
-              <span className="value">140%</span>
+              <span className="c-ratio-label">Min</span>
+              <span className="c-ratio-value">140%</span>
             </div>
           </div>
         </div>
@@ -52,8 +53,8 @@ const Header = () => {
         </a>
         <div className="account">
           <img src={MetaMaskIcon} alt="MetaMask" className="account-icon" />
-          <span className="account-address">wallet address</span>
-          <button className="dropdown">▼</button>
+          <span className="account-address">0x8997...</span>
+          <button className="dropdown"></button>
         </div>
       </div>
     </header>

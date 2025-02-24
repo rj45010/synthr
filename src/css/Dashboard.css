@@ -1,0 +1,171 @@
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  position: absolute;
+  width: 86px;
+  height: 550px;
+  top: 111px;
+  left: 44px;
+  opacity: 0.8;
+  background: radial-gradient(circle at center, #002626 0%, #001a1a 50%, #001212 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.sidebar-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.sidebar-item:hover .sidebar-label,
+.sidebar-item:hover .sidebar-icon,
+.sidebar-item.active .sidebar-icon {
+  color: #24C591;
+  filter: brightness(0) saturate(100%) invert(75%) sepia(36%) saturate(416%) 
+          hue-rotate(115deg) brightness(96%) contrast(90%);
+}
+
+.sidebar-item.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 50%;
+  background-color: #2BF5AB;
+  box-shadow: 0 0 6px #2BF5AB;
+  border-radius: 0 15px 15px 0;
+}
+
+.sidebar-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.sidebar-label {
+  font-family: "Chakra Petch";
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 11px;
+  color: #67807C;
+}
+
+.sidebar-item.active .sidebar-label {
+  color: #21D38D;
+}
+
+
+/* Main Content */
+.main-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 82px;
+  top: 111px;
+  left: 143px;
+  right: 44px;
+  gap: 15px;
+}
+
+.nav-container {
+  display: flex;
+  border-radius: 19px;
+  padding: 13px 15px;
+  background: linear-gradient(180deg, #263A3C 0%, #162324 100%);
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  gap: 6px;
+  border-radius: 16px;
+  padding-top: 17px;
+  padding-right: 113px;
+  padding-bottom: 17px;
+  padding-left: 113px;
+  cursor: pointer;
+}
+
+.tab.active {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  gap: 6px;
+  background: linear-gradient(214.13deg, #142021 -21.97%, #192829 84.77%);
+  box-shadow: 0px 12px 16px 0px #04111057 inset;
+  border-radius: 16px;
+  padding: 17px 113px;
+}
+
+.icon, .dollar-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.nav-text {
+  font-family: "Chakra Petch";
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19.5px;
+  letter-spacing: 0%;
+  color: #A2BDB3;
+  width: 49px;
+  height: 20px;
+}
+
+.pending-container {
+  position: relative;
+  display: inline-block;
+}
+
+.pending-badge {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  top: -8px; 
+  right: -25px;
+  background: #FFA136;
+  color: black;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.badge-text {
+  font-family: "Chakra Petch";
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: 0px;
+  color: #152926;
+}

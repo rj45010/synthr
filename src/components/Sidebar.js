@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import '../css/Sidebar.css';
-import HomeIcon from '../assets/house.svg';
-import MintIcon from '../assets/mint.svg';
-import SwapIcon from '../assets/swap.svg';
-import BridgeIcon from '../assets/bridge.svg';
-import LiquidationIcon from '../assets/liquidation.svg';
-import FaucetsIcon from '../assets/faucet.svg';
+import HomeIcon from '../assets/images/house.png';
+import MintIcon from '../assets/images/mint.png';
+import SwapIcon from '../assets/images/swap.png';
+import BridgeIcon from '../assets/images/bridge.png';
+import LiquidationIcon from '../assets/images/liquidation.png';
+import FaucetsIcon from '../assets/images/faucet.png';
 
 const sidebarOptions = [
   { id: "home", icon: HomeIcon, label: "Home" },

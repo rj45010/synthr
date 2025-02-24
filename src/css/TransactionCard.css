@@ -1,132 +1,217 @@
 .transaction-container {
-  background-color: #1b362f;
-  padding: 12px 16px;
-  border-radius: 16px;
-  flex: 1 1 calc(33.33% - 10px);
-  min-width: 363px; 
-  max-width: 377px;
-}
-
-.transaction-content {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  background: #192B2B;
+  padding: 26px 27.5px;
+  border-radius: 14px;
+  height: fit-content;
+  min-width: 300px;
+  max-width: 369px;
 }
 
 /* Swap Card */
+.swap-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .token-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
 }
 
-.token-header {
+/* .token-icon {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 6px;
-}
-
-.token-icon {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-  background-color: #95B2BA;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-}
+  width: 32.8px; 
+  height: 28.9px;
+  transform: rotate(90deg);
+  position: relative;
+} */
 
-.eth-icon {
-  height: 12px;
+/* .token-icon::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #A0CED8;
+  clip-path: polygon(
+    25% 0%, 75% 0%, 
+    100% 50%, 75% 100%, 
+    25% 100%, 0% 50%
+  );
+} */
+
+/* .eth {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  width: 10.2px;
+  height: 17.27px;
+} */
+
+.border {
+  height: 38px;
+  width: 34px;
 }
 
 .token-name {
   display: flex;
   align-items: center;
-  gap: 6px;
-  background-color: #95B2BA;
-  font-size: 10px;
-  font-weight: 500;
-  padding: 6px 10px;
-  border-radius: 7px;
-}
-.token-name span {
-  color: black;
+  justify-content: center;
+  width: 60px;
+  height: 16.7px;
+  gap: 10px;
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: #A0CED8;
 }
 
-.name-icon {
-  height: 12px;
+.token-name span {
+  font-family: "Chakra Petch";
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 1%;
+  color: #00232C;
+  width: 41px;
+  height: 15px;
+  text-align: center;
+}
+
+.token-name img {
+  width: 8px;
+  height: 14px;
 }
 
 .token-info {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 6px;
 }
 
 .token-amount {
-  color: #E6EEF0;
+  font-family: "Chakra Petch";
+  font-weight: 700;
   font-size: 14px;
-  font-weight: 400;
+  line-height: 18.2px;
+  letter-spacing: 0px;
+  text-align: center;
+  width: 59px;
+  height: 18px;
+  color: #E8FFFE;
 }
 
 .token-label {
-  color: #4CC38A;
+  font-family: "Chakra Petch";
+  font-weight: 500;
   font-size: 12px;
+  line-height: 15.6px;
   text-align: center;
+  color: #2BF5AB;
 }
 
 .swap-indicator {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  justify-content: center;
+  width: fit-content;
+  gap: 5px;
 }
 
 .swap-progress {
-  height: 4px;
-  width: 160px;
-  background: linear-gradient(90deg, transparent 0%, #4CC38A 50%, transparent 100%);
+  width: 164px;
+  height: 5px;
+  top: 25px;
+  border-radius: 29px;
+  background: linear-gradient(90deg, transparent 0%, #12E391 50%, transparent 100%);
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .swap-dot {
-  width: 12px;
-  height: 12px;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  background-color: #59e3a0;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23.64px; 
+  height: 23px;
+  transform: rotate(90deg);
+  position: relative;
 }
+  
+.swap-dot::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #2BF5AB;
+  clip-path: polygon(
+    25% 0%, 75% 0%, 
+    100% 50%, 75% 100%, 
+    25% 100%, 0% 50%
+  );
+}
+
+.loading-container {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin-container 1s linear infinite;
+}
+
+@keyframes spin-container {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-dot {
+  position: absolute;
+  background-color: #1D4809; 
+  border-radius: 50%;
+}
+
+.loading-dot:nth-child(1) { width: 0.77px; height: 0.77px; transform: rotate(0deg) translate(5px); }
+.loading-dot:nth-child(2) { width: 1.03px; height: 1.03px; transform: rotate(45deg) translate(5px); }
+.loading-dot:nth-child(3) { width: 1.29px; height: 1.29px; transform: rotate(90deg) translate(5px); }
+.loading-dot:nth-child(4) { width: 1.54px; height: 1.54px; transform: rotate(135deg) translate(5px); }
+.loading-dot:nth-child(5) { width: 1.8px; height: 1.8px; transform: rotate(180deg) translate(5px); }
+.loading-dot:nth-child(6) { width: 2.06px; height: 2.06px; transform: rotate(225deg) translate(5px); }
+.loading-dot:nth-child(7) { width: 2.32px; height: 2.32px; transform: rotate(270deg) translate(5px); }
+.loading-dot:nth-child(8) { width: 2.57px; height: 2.57px; transform: rotate(315deg) translate(5px); }
+
 
 .swap-text {
-  color: #4CC38A;
-  font-size: 13px;
-  margin-top: 4px;
+  margin-top: 40px;
+  font-family: "Chakra Petch";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18.2px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #2BF5AB;
 }
+
 
 /* Liquidation Card */
-.liquidation-grid {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: space-between;
-}
-
 .liquidation-header {
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1b362f;
-  padding: 10px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  height: 40px;
+  background: #192B2B;
+  border-width: 1px;
+  border-radius: 14px;
+  padding: 0px 15px;
+  border: 1px solid #2E4D4F
 }
 
 .liquidation-details {
@@ -135,64 +220,109 @@
   gap: 10px;
 }
 
-.liquidation-icon {
+/* .liquidation-icon {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 24px;
-  height: 24px;
-  background-color: #95B2BA;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  justify-content: center;
+  width: 36.2px; 
+  height: 32.3px;
+  color: #A0CED8;
+  transform: rotate(90deg);
   position: relative;
 }
 
+.liquidation-icon::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #A0CED8;
+  clip-path: polygon(
+    25% 0%, 75% 0%, 
+    100% 50%, 75% 100%, 
+    25% 100%, 0% 50%
+  );
+}
+
 .liquidation-icon img {
-  height: 12px;
+  position: absolute;
+  width: 11.4px;
+  height: 19px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+} */
+
+.liquidation-icon img {
+  width: 38px;
+  height: 42px;
 }
 
 .liquidation-info {
-  line-height: 1.5;
-}
-
-.liquidation-amount {
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 0;
-}
-
-.liquidation-subtext {
-  color: #34D399;
-  font-size: 12px;
-  margin-top: 0;
-}
-
-.network-tag {
-  background: #95B2BA;
-  padding: 6px 8px;
-  border-radius: 8px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 3px;
 }
 
-.network-tag span {
-  color: black;
-  font-size: 12px;
+.liquidation-amount {
+  font-family: "Chakra Petch";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20.8px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #E8FFFE;
+  
 }
 
-.network-icon {
-  width: 12px;
-  height: 12px;
+.liquidation-subtext {
+  color: #2BF5AB;
+  font-family: "Chakra Petch";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15.6px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.network-tag {
+  background: #A0CED8;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.network-tag span {
+  width: 41px;
+  height: 15px;
+  font-family: "Chakra Petch";
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 1%;
+  color: #00232C;
+}
+
+.network-tag img {
+  width: 8.5px;
+  height: 14px;
 }
 
 .liquidation-progress-container {
-  margin-top: 12px;
+  gap: 12px;
 }
 
 .liquidation-status {
-  color: #34D399;
-  font-size: 12px;
+  color: #2BF5AB;
+  width: 138px;
+  height: 18px;
+  font-family: "Chakra Petch";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18.2px;
+  letter-spacing: 0px;
+  text-align: start;
 }
 
 .progress-bar {
@@ -200,22 +330,138 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 6px;
-  width: 100%;
-  background: linear-gradient(90deg, transparent 0%, #37805c 50%, transparent 100%);
+  height: 9px;
+  border-radius: 2px;
+  background: radial-gradient(55.15% 86544.38% at 50% 50%, rgb(36, 94, 72) 0%, rgba(27, 72, 55, 0) 100%);
 }
 
 .progress-fill {
-  height: 6px;
-  width: 42px;
-  border-radius: 16px;
-  background-color: #4dffa9;
+  width: 51.6px;
+  height: 7.6px;
+  left: 159.74px;
+  border-radius: 3px;
+  background-color: #2BF5AB;
+  animation: progressAnimation 3s ease-in-out infinite;
+  position: absolute;
+}
+
+.progress-fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 52px;
+  height: 7.6px;
+  background: repeating-linear-gradient(110deg,
+    transparent,
+    transparent 2px,
+    rgba(36, 94, 72, 0.33) 2px,
+    rgba(36, 94, 72, 0.33) 3px
+  );
+}
+
+@keyframes progressAnimation {
+  0% { left: 0%; }
+  50% { left: 100%; transform: translateX(-100%); }
+  100% { left: 0%; }
 }
 
 .transaction-grid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-start;
+  display: grid;
+  gap: 13px;
+  grid-template-columns: repeat(auto-fit, minmax(369px, 1fr)); 
+}
+
+/* ------------------- MEDIA QUERIES ------------------- */
+
+/* 📍 Large Tablets & Small Laptops (Max-width: 1024px) */
+@media screen and (max-width: 1717px) {
+  .transaction-container {
+    max-width: 500px;
+  }
+  .transaction-grid {
+    grid-template-columns: repeat(auto-fit,(3, 1fr));
+  }
+}
+
+@media screen and (max-width: 1335px) {
+  .transaction-container {
+    max-width: 600px;
+  }
+  .transaction-grid {
+    grid-template-columns: repeat(auto-fit,(2, 1fr));
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .transaction-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .swap-card {
+    align-items: center;
+  }
+
+  .token-box {
+    text-align: center;
+  }
+}
+
+/* 📍 Tablets (Max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .transaction-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .transaction-container {
+    padding: 20px;
+    min-width: 100%;
+  }
+
+  .swap-card {
+    gap: 10px;
+  }
+
+  .swap-indicator img {
+    width: 25px;
+  }
+
+  .liquidation-header {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .liquidation-details {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+/* 📍 Mobile Devices (Max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .transaction-container {
+    padding: 15px;
+  }
+
+  .token-name span {
+    font-size: 9px;
+  }
+
+  .token-amount {
+    font-size: 12px;
+  }
+
+  .liquidation-amount {
+    font-size: 14px;
+  }
+
+  .swap-text {
+    font-size: 12px;
+  }
+
+  .progress-fill {
+    width: 40px;
+    height: 5px;
+  }
 }
